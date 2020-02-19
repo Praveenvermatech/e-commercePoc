@@ -14,10 +14,20 @@ repositories {
 
 dependencies {
 	implementation 'org.springframework.boot:spring-boot-starter-data-mongodb-reactive'
-	implementation 'org.springframework.boot:spring-boot-starter-oauth2-client'
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	implementation 'org.springframework.boot:spring-boot-starter-webflux'
+	
+	// Spring boot
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-web', version: '2.1.0.RELEASE'
+	
+	//Spring Security Oauth2
+	compile group: 'org.springframework.security.oauth', name: 'spring-security-oauth2', version: '2.3.4.RELEASE'
+	
+	//Spring Data Mongo
+	compile group: 'org.springframework.boot', name: 'spring-boot-starter-data-mongodb', version: '2.1.0.RELEASE'
+	
+	
 	testImplementation('org.springframework.boot:spring-boot-starter-test') {
 		exclude group: 'org.junit.vintage', module: 'junit-vintage-engine'
 	}
